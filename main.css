@@ -1,0 +1,99 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+
+}
+
+.header-container {
+    position: relative;
+    font-size: 36px;
+    
+}
+.header-text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-family: 'Fredericka the Great', cursive;
+    color: rgb(253, 233, 211);
+    font-size: 1.5em;
+    font-weight: normal;
+    text-shadow: 6px 2px 4px rgb(44, 44, 44)
+    
+    
+}
+
+.flex-container {
+    display: flex;
+    background-color: rgb(124, 66, 51);
+    justify-content: flex-end;
+    height: 40px;
+}
+
+.navs {
+    margin-left: 20px;
+    padding: 3px;
+    font-family: 'Josefin Slab', serif;
+    color:  rgb(253, 233, 211);
+    font-size: 20px;
+    font-weight: bold;
+    text-shadow: 6px 2px 4px rgb(44, 44, 44);
+    padding: 10px;
+}
+
+.nav-contact {
+    margin-right: 20px;
+
+}
+
+fa, .fa-leaf {
+    visibility: hidden;
+    padding: 0px 6px;
+}
+
+.flex-container > div:hover .fa-leaf {
+    visibility: visible;
+}
+
+@media only screen and (min-width: 532px) {
+    .flex-container {
+        flex-direction: row;
+        position: sticky;
+        top: 0;
+    }
+    .flex-vertical {
+        display: none;
+    }
+}
+
+@media only screen and (max-width: 536px) {
+    .flex-container {
+        position: absolute;
+        flex-direction: column;
+        align-items: flex-end;
+        justify-content: stretch;
+        height: 20px;
+        width: 100%;
+        z-index: 1;
+    }
+    .nav-contact {
+        margin-right: 0px;
+    }
+    /*.flex-overlay {
+        position: relative;
+        background: rgb(124, 66, 51);
+        height: 150px;
+        width: 100px;
+    
+    }*/
+
+    .navs {
+        background-color: rgb(124, 66, 51);
+        padding: 6px;
+        
+    }
+
+}
+
+
