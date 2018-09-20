@@ -5,11 +5,21 @@
 
 }
 
+/* Changing link style  */
+a {
+    text-decoration-line: none;
+    font-family: 'Josefin Slab', serif;
+    color:  rgb(253, 233, 211);
+    
+}
+
+/* Header containing flexbox navigation links */
 .header-container {
     position: relative;
     font-size: 36px;
     
 }
+
 .header-text {
     position: absolute;
     top: 50%;
@@ -19,9 +29,7 @@
     color: rgb(253, 233, 211);
     font-size: 1.5em;
     font-weight: normal;
-    text-shadow: 6px 2px 4px rgb(44, 44, 44)
-    
-    
+    text-shadow: 6px 2px 4px rgb(44, 44, 44)   
 }
 
 .flex-container {
@@ -33,7 +41,6 @@
 
 .navs {
     margin-left: 20px;
-    padding: 3px;
     font-family: 'Josefin Slab', serif;
     color:  rgb(253, 233, 211);
     font-size: 20px;
@@ -47,14 +54,115 @@
 
 }
 
-fa, .fa-leaf {
+/* Show/Hide Font Awesome leaf icon on hover*/
+.flex-container > div .fa-leaf {
     visibility: hidden;
     padding: 0px 6px;
+    
 }
 
 .flex-container > div:hover .fa-leaf {
     visibility: visible;
 }
+
+/* Footer Sizing Magic with Flex Box @ philipwalton */
+.site {
+    display: flex;
+    min-height: 100vh;
+    flex-direction: column;
+}
+
+.site-content {
+    flex: 1;
+}
+
+/* The actual footer */
+.footer-container {
+    display: flex;
+    flex-direction: row;
+    flex: 1;
+    background-color: rgb(124, 66, 51);
+    height: 1vh;  
+}
+
+.footer-left {
+    justify-content: flex-start;
+    align-items: center;
+    padding: 1rem; 
+    background-color: rgb(105, 56, 44);  
+    border-right: 1px solid rgba(182, 140, 96, 0.274);
+}
+
+.footer-left > p {
+    font-family: 'Josefin Slab', serif;
+    color:  rgb(253, 233, 211);
+    font-size: 17px;
+    font-weight: bold;
+    padding: .2rem;
+    text-shadow: 6px 2px 4px rgb(44, 44, 44);
+}
+
+.footer-middle {
+    justify-content: center;
+   
+}
+
+.footer-middle > i {
+    visibility: visible;
+    height: 20%;
+}
+
+.table-links, td, tr {
+    font-family: 'Josefin Slab', serif;
+    color:  rgb(253, 233, 211);
+    font-size: 15px;
+    font-weight: 200;
+    padding: .1rem;
+    text-shadow: 6px 2px 4px rgb(44, 44, 44);
+    text-align: center;
+}
+
+.table-links > tr {
+    text-align: center;
+}
+
+.footer-right {
+    justify-content: flex-end;
+    background-color: rgb(105, 56, 44);  
+    border-left: 1px solid rgba(182, 140, 96, 0.274);
+    
+}
+
+.footer-right-flex {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex: 1 1;
+    flex-flow: row wrap;
+}
+
+.footer-right > div {
+    color: rgb(253, 233, 211);
+    font-size: 17px;
+    font-weight: 100;
+    padding: .5rem;
+    text-shadow: 6px 2px 4px rgb(44, 44, 44);
+}
+
+.social {
+
+}
+
+.footer-grow {
+    flex: 1 1;
+}
+
+.footer-icons {
+    visibility: visible;
+    padding-right: 10px;
+}
+
+/* Media Queries */
 
 @media only screen and (min-width: 532px) {
     .flex-container {
@@ -96,4 +204,14 @@ fa, .fa-leaf {
 
 }
 
+@media only screen and (min-width: 1150px) {
+    .footer-container {
+        height: 8vh;
+    }
+}
 
+@media only screen and (min-width: 1260px) {
+    .footer-container {
+        height: 10vh;
+    }
+}
