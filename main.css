@@ -74,16 +74,31 @@ a {
 
 .site-content {
     flex: 1;
+    min-height: 50vh;
+    background-color: rgb(253, 233, 211);
 }
 
-/* The actual footer */
+/* Contact page requires a larger main content area */
+
+.site-content-contact {
+    flex: 1;
+    min-height: 75vh;
+    background-color: rgb(253, 233, 211);
+}
+
+/* Footer flex container*/
 .footer-container {
     display: flex;
     flex-direction: row;
     flex: 1;
-    background-color: rgb(124, 66, 51);
-    height: 1vh;  
+    background-color: rgb(124, 66, 51); 
 }
+
+.footer-grow {
+    flex: 1 1;
+}
+
+/* Left footer panel with icons */
 
 .footer-left {
     justify-content: flex-start;
@@ -101,6 +116,13 @@ a {
     padding: .2rem;
     text-shadow: 6px 2px 4px rgb(44, 44, 44);
 }
+
+.footer-icons {
+    visibility: visible;
+    padding-right: 10px;
+}
+
+/* Middle footer panel with links */
 
 .footer-middle {
     justify-content: center;
@@ -126,6 +148,8 @@ a {
     text-align: center;
 }
 
+/* Right footer panel with icons */
+
 .footer-right {
     justify-content: flex-end;
     background-color: rgb(105, 56, 44);  
@@ -149,18 +173,139 @@ a {
     text-shadow: 6px 2px 4px rgb(44, 44, 44);
 }
 
-.social {
+/* All pages */
+
+/* About Us page */
+
+/* Our Plants page */
+
+
+.header-plants {
+    position: absolute;
+    top: 65%;
+    left: 50%;
+    transform: translate(-65%, -50%);
+    font-family: 'Fredericka the Great', cursive;
+    color: rgb(253, 233, 211);
+    font-size: 1.2em;
+    font-weight: normal;
+    text-shadow: 6px 2px 4px rgb(44, 44, 44)   
+}
+
+.info-card-stick {
+    display: flex;
+    flex: 1;
+    justify-content: flex-start;
+}
+
+.info-card {
+    height: 11rem;
+    width: 17rem;
+    background-color: rgb(124, 66, 51);
+    transform: translate(8%, 12%);
+    border: 3px solid rgba(243, 170, 87, 0.377);
+    z-index: 1;
 
 }
 
-.footer-grow {
-    flex: 1 1;
+.info-card-text {
+    font-family: 'Josefin Slab', serif;
+    color:  rgb(253, 233, 211);
+    font-size: 20px;
+    font-weight: 600;
+    padding: 1em;
 }
 
-.footer-icons {
-    visibility: visible;
-    padding-right: 10px;
+.table-container {
+    display: flex;
+    justify-content: flex-end;
+    transform: translate(-9%, -11%);
 }
+
+.plant-table {
+    background-color: rgb(124, 66, 51);
+    border: 3px solid rgba(243, 170, 87, 0.377);
+    
+}
+
+.head > td {
+    font-size: 20px;
+    font-weight: 600;
+}
+
+/* Resources page */
+
+/* Contact Us page */
+
+.header-contact {
+    position: absolute;
+    top: 65%;
+    left: 50%;
+    transform: translate(-65%, -50%);
+    font-family: 'Fredericka the Great', cursive;
+    color: rgb(253, 233, 211);
+    font-size: 1.2em;
+    font-weight: normal;
+    text-shadow: 6px 2px 4px rgb(44, 44, 44);   
+}
+
+.contact-container {
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    transform: translate(65%, 10%);
+    background-color: rgb(124, 66, 51);
+    border: 3px solid rgba(243, 170, 87, 0.377);
+    height: 33rem;
+    width: 30rem;
+}
+
+.contact-form {
+    font-family: 'Josefin Slab', serif;
+    color:  rgb(253, 233, 211);
+    font-size: 20px;
+    font-weight: 600;
+    padding: 1em;
+}
+
+input[type=text], input[type=email], select, textarea {
+    font-family: 'Josefin Slab', serif;
+    font-size: 15px;
+    font-weight: 400;
+    width: 100%;
+    padding: 12px;
+    border: 1px solid rgb(253, 233, 211);
+    border-radius: 4px;
+    box-sizing: border-box;
+    margin-top: 6px;
+    margin-bottom: 16px;
+    resize: vertical;
+}
+
+button {
+    font-family: 'Josefin Slab', serif;
+    font-weight: 600;
+    font-size: 18px;
+    background-color: rgb(253, 233, 211);
+    color: rgb(124, 66, 51);
+    padding: 12px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: rgb(184, 108, 88); 
+    color: rgb(253, 233, 211);
+}
+
+.img-leaf-con {
+    position: absolute;
+    display: flex;
+    justify-content: flex-end;
+    transform: translate(-65%, -50%);
+}
+
 
 /* Media Queries */
 
@@ -202,6 +347,12 @@ a {
         
     }
 
+}
+
+@media only screen and (min-width: 1020px) {
+        title {
+            overflow-wrap: break-word;    
+    }
 }
 
 @media only screen and (min-width: 1150px) {
