@@ -292,6 +292,7 @@ a {
 .plant-table {
     background-color: rgb(124, 66, 51);
     border: 3px solid rgba(243, 170, 87, 0.377);
+    width: 70%;
     
 }
 
