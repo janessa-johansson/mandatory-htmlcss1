@@ -1,4 +1,4 @@
-// Best viewed 
+// Best viewed at 1090x780px
 
 
 Index.html = Index.html {
