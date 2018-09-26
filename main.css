@@ -438,6 +438,9 @@ button:hover {
     transform: translate(-65%, -50%);
 }
 
+select, option {
+    color: rgb(102, 101, 101);
+}
 
 /* Media Queries */
 
