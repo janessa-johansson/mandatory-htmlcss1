@@ -1,4 +1,5 @@
-// Best viewed at 1090x780px
+// Best viewed at 1090x780px on CHROME
+
 
 
 Index.html = Index.html {
